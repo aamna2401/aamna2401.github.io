@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aamna Khan – Senior ML Engineer</title>
+<meta name="description" content="Aamna Khan, senior machine learning engineer working on computer vision, document AI and agentic systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1F4; --surface:#F8FAFB; --ink:#18222D; --muted:#566373; --rule:#CBD3DB;
+  --box:#0B7A83; --poly:#B8860B; --link:#0B5F8A;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#10161D; --surface:#17202A; --ink:#E4EAF0; --muted:#97A4B2; --rule:#2A3644;
+    --box:#4CC4CB; --poly:#E9BE52; --link:#7CC4EA;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.0625rem; line-height:1.6;
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);
+}
+a{color:var(--link); text-underline-offset:.18em; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--box); outline-offset:3px; border-radius:2px}
+.wrap{max-width:68rem; margin:0 auto; padding:0 1.5rem}
+.prose{max-width:40rem}
+
+/* Hero */
+header.hero{padding:4.5rem 0 3.5rem}
+.hero-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:2.5rem; align-items:center}
+h1{font-size:clamp(2.6rem,6vw,4.4rem); line-height:1.02; letter-spacing:-.02em; margin:0 0 1rem; font-weight:700}
+.role{font-size:1.25rem; color:var(--muted); margin:0 0 1.5rem; max-width:32rem}
+.links{display:flex; flex-wrap:wrap; gap:.6rem 1.4rem; margin:0; padding:0; list-style:none; font-weight:500}
+.detect{width:100%; max-width:26rem; justify-self:end}
+.detect svg{width:100%; height:auto; display:block; overflow:visible}
+.detect text.ur{font-family:"Noto Nastaliq Urdu",serif; fill:var(--ink)}
+.detect .poly{fill:none; stroke:var(--poly); stroke-width:2; stroke-linejoin:round}
+.detect .vtx{fill:var(--poly)}
+.detect .box{fill:none; stroke:var(--box); stroke-width:1.5; stroke-dasharray:5 4}
+.detect .tag{font:500 12px "IBM Plex Mono",ui-monospace,monospace}
+.detect .tag-poly{fill:var(--poly)} .detect .tag-box{fill:var(--box)}
+.detect figcaption{font-size:.85rem; color:var(--muted); margin-top:.6rem}
+@media (prefers-reduced-motion:no-preference){
+  .detect .poly{stroke-dasharray:900; stroke-dashoffset:900; animation:trace 1.6s .4s ease-out forwards}
+  .detect .vtx,.detect .tag-poly{opacity:0; animation:show .3s 1.9s forwards}
+  @keyframes trace{to{stroke-dashoffset:0}}
+  @keyframes show{to{opacity:1}}
+}
+
+/* Sections */
+section{padding:3rem 0; border-top:1px solid var(--rule)}
+h2{font-size:1.6rem; letter-spacing:-.01em; margin:0 0 .4rem}
+.lede{color:var(--muted); margin:0 0 2rem; max-width:40rem}
+
+.work{list-style:none; margin:0; padding:0}
+.work li{display:grid; grid-template-columns:15rem 1fr; gap:.4rem 2rem; padding:1.4rem 0; border-bottom:1px solid var(--rule)}
+.work li:last-child{border-bottom:0}
+.work h3{font-size:1.15rem; margin:0; line-height:1.3}
+.work .meta{color:var(--muted); font-size:.9rem; margin:.25rem 0 0}
+.work p{margin:0}
+.result{display:block; margin-top:.5rem; padding-left:.75rem; border-left:3px solid var(--box); font-weight:500}
+
+.nda .result{border-left-color:var(--poly)}
+
+.timeline{list-style:none; margin:0; padding:0; max-width:46rem}
+.timeline li{display:grid; grid-template-columns:10rem 1fr; gap:1.5rem; padding:.9rem 0}
+.timeline time{color:var(--muted); font-size:.95rem}
+.timeline strong{display:block}
+.timeline span{color:var(--muted)}
+
+.now{background:var(--surface); border:1px solid var(--rule); border-radius:10px; padding:1.5rem 1.75rem; max-width:46rem}
+.now p{margin:0}
+
+.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1.5rem 2.5rem; max-width:60rem}
+.skills h3{font-size:1rem; margin:0 0 .3rem}
+.skills p{margin:0; color:var(--muted)}
+
+.cvs{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1rem}
+.cvs a{display:inline-block; padding:.6rem 1rem; border:1px solid var(--rule); border-radius:8px; background:var(--surface); text-decoration:none; color:var(--ink); font-weight:500}
+.cvs a:hover{border-color:var(--box)}
+
+footer{padding:2.5rem 0 3rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem}
+
+@media (max-width:760px){
+  header.hero{padding:3rem 0 2.5rem}
+  .hero-grid{grid-template-columns:1fr}
+  .detect{justify-self:start; max-width:20rem}
+  .work li,.timeline li{grid-template-columns:1fr; gap:.3rem}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Aamna Khan</h1>
+      <p class="role">Senior machine learning engineer. I build systems that read messy real-world images and turn them into structured output you can check.</p>
+      <ul class="links">
+        <li><a href="https://github.com/aamna2401">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/aamna-khan2401/">LinkedIn</a></li>
+        <li><a href="mailto:aamnakhan2401@gmail.com">aamnakhan2401@gmail.com</a></li>
+        <li><a href="#cv">Download CV</a></li>
+      </ul>
+    </div>
+    <figure class="detect">
+      <svg viewBox="0 0 360 200" role="img" aria-label="My name in Urdu, outlined by a curved text-detection polygon and a looser rectangular box">
+        <rect class="box" x="18" y="34" width="324" height="132"/>
+        <text class="tag tag-box" x="18" y="26">box</text>
+        <text class="ur" x="180" y="120" font-size="54" text-anchor="middle">آمنہ خان</text>
+        <polygon class="poly" points="44,92 92,66 180,58 268,66 320,90 324,128 290,150 180,158 70,150 38,126"/>
+        <circle class="vtx" cx="44" cy="92" r="3"/><circle class="vtx" cx="92" cy="66" r="3"/><circle class="vtx" cx="180" cy="58" r="3"/>
+        <circle class="vtx" cx="268" cy="66" r="3"/><circle class="vtx" cx="320" cy="90" r="3"/><circle class="vtx" cx="324" cy="128" r="3"/>
+        <circle class="vtx" cx="290" cy="150" r="3"/><circle class="vtx" cx="180" cy="158" r="3"/><circle class="vtx" cx="70" cy="150" r="3"/>
+        <circle class="vtx" cx="38" cy="126" r="3"/>
+        <text class="tag tag-poly" x="342" y="186" text-anchor="end">polygon</text>
+      </svg>
+      <figcaption>My name in Urdu. My MS thesis taught models to outline curved Urdu text with polygons instead of loose boxes.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+<section id="work">
+  <div class="wrap">
+    <h2>Open-source projects</h2>
+    <p class="lede">Each repo has a reproducible evaluation on held-out data, a baseline to compare against, and an honest list of limits.</p>
+    <ul class="work">
+      <li>
+        <div><h3><a href="https://github.com/aamna2401/document-capture">Document Capture</a></h3><p class="meta">Python, RapidOCR, pdfplumber, FastAPI</p></div>
+        <p>Upload a receipt photo, invoice PDF or scan and get clean fields back, fully offline. Every value cites the page and bounding box it came from, and anything doubtful goes to a person for review instead of being guessed.
+        <span class="result">Evaluated on the held-out CORD receipt benchmark</span></p>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/aamna2401/lane-drift-monitor">Lane-Drift Monitor</a></h3><p class="meta">Python, OpenCV, FastAPI</p></div>
+        <p>Turns dashcam video into the car’s position in its lane, in metres, and flags lane departures for driver-safety review. Runs on a single CPU core with no GPU.
+        <span class="result">Departure recall up from 0.00 to 0.94–1.00 against a per-frame baseline, at about 100 FPS</span></p>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/aamna2401/urdu-text-detection-natural-scene-images-">Urdu Scene Text Detection</a></h3><p class="meta">PyTorch, OpenCV, MS thesis</p></div>
+        <p>Finds Urdu text of any shape on shop signs, banners and walls. A boundary model with graph convolutions and a Bi-LSTM refines a polygon until it hugs the curved text.
+        <span class="result">F-score 0.76, against 0.50 for Faster R-CNN and 0.46 for YOLOv5</span></p>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/aamna2401/Computer-Vision-Fundamentals">Computer Vision Fundamentals</a></h3><p class="meta">NumPy, OpenCV, PyTorch</p></div>
+        <p>Ten classic algorithms written from first principles, each with a demo and a short write-up: Canny, Harris corners, camera calibration, rectification, a CNN with hand-written backpropagation, and graph convolutions.
+        <span class="result">Normalised 8-point algorithm cut epipolar error from 8.72 to 0.25 px</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="professional" class="nda">
+  <div class="wrap">
+    <h2>Professional work</h2>
+    <p class="lede">Built for employers and clients. The code is under NDA, so these are descriptions only.</p>
+    <ul class="work">
+      <li>
+        <div><h3>Property map analysis</h3><p class="meta">Xosoft Technologies</p></div>
+        <p>Reads scanned real-estate maps. Detection and segmentation models find plots and boundaries, and a Qwen3-VL agent decides when to call OCR, geometry checks or visual reasoning to settle ambiguous corners. Output is GeoJSON for GIS systems.
+        <span class="result">19K+ images at over 90% accuracy, with 95% less manual annotation</span></p>
+      </li>
+      <li>
+        <div><h3>Real-estate price forecasting</h3><p class="meta">Xosoft Technologies</p></div>
+        <p>Forecasts Dubai property prices from 1.4M+ Dubai Land Department transactions. Market regimes come from a Markov switching model, encodings are leakage-safe, and every model is tested on a later year it never saw.</p>
+      </li>
+      <li>
+        <div><h3>Early fall detection</h3><p class="meta">Freelance client work</p></div>
+        <p>Spots falls in surveillance video as early as possible. Skeleton movement, body action and scene context are fused in a multi-stage LSTM and compared with the original ST-GCN model.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="now">
+  <div class="wrap">
+    <h2>What I’m building now</h2>
+    <div class="now">
+      <p>An agent on top of Document Capture that answers questions across many documents, such as “How much did we spend with this vendor in March?” It runs on open-weight models (Qwen3) through an MCP server, does all arithmetic in code rather than in the model, and cites the page behind every number.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ol class="timeline" reversed>
+      <li><time>2025 – 2026</time><div><strong>Senior ML/AI Engineer, Xosoft Technologies</strong><span>Computer vision, vision-language agents and forecasting</span></div></li>
+      <li><time>2019 – now</time><div><strong>Freelance AI/ML Engineer, Upwork agency</strong><span>Part-time ML, computer vision and NLP projects for international clients</span></div></li>
+      <li><time>2023 – 2024</time><div><strong>Senior Engineer, Bridge Placement (USA, remote)</strong><span>Computer vision for automotive, retail and surveillance clients</span></div></li>
+      <li><time>2022 – 2023</time><div><strong>Associate Resource Developer, Systems Limited</strong><span>Trained 70+ graduates in AI and ML</span></div></li>
+      <li><time>2021 – 2023</time><div><strong>Teaching Assistant, Information Technology University</strong><span>Machine Learning and Research Methodology</span></div></li>
+      <li><time>2020 – 2022</time><div><strong>Machine Learning Engineer, Urbanise (Australia, remote)</strong><span>Image captioning and job-allocation automation</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Tools I use</h2>
+    <div class="skills" style="margin-top:1.25rem">
+      <div><h3>Computer vision</h3><p>OpenCV, YOLO, Faster R-CNN, Mask R-CNN, U-Net, OCR, calibration and geometry</p></div>
+      <div><h3>Agents and language</h3><p>Qwen3-VL, tool calling, MCP, LangChain, AutoGen, RAG, FAISS, LoRA</p></div>
+      <div><h3>Machine learning</h3><p>PyTorch, TensorFlow, XGBoost, LightGBM, Prophet, statsmodels</p></div>
+      <div><h3>Shipping it</h3><p>ONNX, CUDA, MLflow, Docker, FastAPI, Azure ML, AWS</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="wrap">
+    <h2>CV</h2>
+    <p class="lede" style="margin-bottom:0">Pick the version closest to the role.</p>
+    <div class="cvs">
+      <a href="cv/Aamna-Khan-CV-Computer-Vision-Agentic-AI.pdf">Computer vision and agentic AI</a>
+      <a href="cv/Aamna-Khan-CV-ML-Forecasting.pdf">Machine learning and forecasting</a>
+      <a href="cv/Aamna-Khan-CV-Vision-NLP-Agentic-AI.pdf">Vision, NLP and agentic AI</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Islamabad, Pakistan. Open to senior ML, computer vision and agentic AI roles. <a href="mailto:aamnakhan2401@gmail.com">Get in touch</a>.</div>
+</footer>
+
+</body>
+</html>
